@@ -1,0 +1,22 @@
+package by.inventedcompanyname.linear;
+
+import java.util.Scanner;
+
+// Найдите  значение функции: b = a + 3
+
+public class Task02LinearFunction {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Enter a: ");
+		
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		
+		int b = a + 3;
+		
+		System.out.println("b = " + b);
+				
+	}
+
+}
