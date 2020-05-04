@@ -1,0 +1,21 @@
+package by.inventedcompanyname.linear;
+
+public class Task05OperatorsPrecedence {
+	public static void main(String[] args) {
+		try {
+			int a = 0;
+			int b = 5;
+			int c = 8;
+
+			if (a == 0) {
+				throw new ArithmeticException();
+			} else {
+				double result = (b + Math.sqrt((Math.pow(b, 2) + 4 * a * c))) / (2 * a) - Math.pow(a, 3) * c
+						+ Math.pow(b, -2);
+				System.out.println(result);
+			}
+		} catch (Exception ae) {
+			System.out.println("Division by zero");
+		}
+	}
+}
