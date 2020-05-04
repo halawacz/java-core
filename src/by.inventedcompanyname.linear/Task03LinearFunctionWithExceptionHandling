@@ -1,0 +1,29 @@
+package by.inventedcompanyname.linear;
+
+import java.util.Scanner;
+
+// Calculate the value of the following function: b = a + 3
+
+public class Task03LinearFunctionWithExceptionHandling {
+
+	public static void main(String[] args) {
+		int a;
+		int b;
+		boolean inputError = true;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter an integer a: ");
+		while (inputError) {
+			if (sc.hasNextInt()) {
+				a = sc.nextInt();
+			} else {
+				sc.next();
+				System.out.println("Enter an integer! a: ");
+				continue;
+			}
+			b = a + 3;
+			System.out.println("b: " + b);
+			inputError = false;
+		}
+
+	}
+}
