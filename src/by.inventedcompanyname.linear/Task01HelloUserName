@@ -2,7 +2,7 @@ package by.inventedcompanyname.linear;
 
 import java.util.Scanner;
 
-public class HelloUserName {
+public class Task01HelloUserName {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your name: ");
