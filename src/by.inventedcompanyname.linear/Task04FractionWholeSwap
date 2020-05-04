@@ -1,0 +1,33 @@
+package by.inventedcompanyname.linear;
+
+public class Task04FractionWholeSwap {
+
+	// swap fraction and whole part of a (hard-coded) real number r represented as
+	// nnn.ddd
+	/* solution 1 - barely working because of the way floating point arithmetic is implemented in Java
+	
+	public static void main(String[] args) {
+		double r = 123.456;
+
+		double whole = Math.floor(r);
+		double fraction = r - whole;
+		double result = Math.round(fraction * 1000) + whole / 1000;
+
+		System.out.println(result);
+	}
+}
+*/
+
+// solution 2 - converts the number to string and swaps the whole and the fraction
+
+	public static void main(String[] args) {
+		double r = 123.456;
+
+		String rStringified = "" + r;
+		String whole = rStringified.split("\\.")[0];
+		String fraction = rStringified.split("\\.")[1];
+		String result = fraction + "." + whole;
+
+		System.out.println(result);
+	}
+}
