@@ -1,0 +1,30 @@
+package by.inventedcompanyname.branching;
+
+import java.util.*;
+
+//outputs to the console the biggest number out of three. If the numbers are equal, outputs "numbers are equal"
+
+public class Task02BiggestOfThree {
+
+	public static void main(String[] args) {
+
+		Scanner sc1 = new Scanner(System.in);
+		System.out.println("Enter a: ");
+		double a = sc1.nextDouble();
+		System.out.println("Enter b: ");
+		double b = sc1.nextDouble();
+		System.out.println("Enter c: ");
+		double c = sc1.nextDouble();
+
+		if ((a > b) && (a > c)) {
+			System.out.println("a is the biggest number");
+		} else if ((b > a) && (b > c)) {
+			System.out.println("b is the biggest number");
+		} else if ((c > a) && (c > b)) {
+			System.out.println("c is the biggest number");
+		} else {
+			System.out.println("numbers are equal");
+		}
+
+	}
+}
