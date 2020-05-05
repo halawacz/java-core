@@ -1,0 +1,20 @@
+package by.inventedcompanyname.branching;
+//returns the biggest number out of two smallest numbers 
+
+public class MaxMin {
+    public static void main(String[] args) {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+
+        int min1 = Math.min(a, b);
+        int min2 = Math.min(c, d);
+
+        if (min1 > min2) {
+            System.out.println(min1);
+        } else {
+            System.out.println(min2);
+        }
+    }
+}
