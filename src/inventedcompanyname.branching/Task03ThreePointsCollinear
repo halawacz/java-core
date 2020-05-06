@@ -1,0 +1,17 @@
+package by.inventedcompanyname.branching;
+
+//checks if three points are collinear. Points are hard-coded. Class Point is defined in the package
+
+public class Task03ThreePointsCollinear {
+    public static void main(String[] args) {
+        Point A = new Point(1, 2);
+        Point B = new Point(3, 4);
+        Point C = new Point(5, 6);
+        
+        if ((B.y - A.y) / (B.x - A.x) == (C.y - A.y) / (C.x - A.x)) {
+            System.out.println("Three points are collinear");
+        } else {
+            System.out.println("Three points are not collinear");
+        }
+    }
+}
