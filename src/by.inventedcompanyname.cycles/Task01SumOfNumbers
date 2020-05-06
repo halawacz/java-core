@@ -1,0 +1,32 @@
+package by.inventedcompanyname.cycles;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+//Напишите программу, где пользователь вводит любое целое положительное число,
+// а программа суммирует все числа от 1 до введенного пользователем числа.
+
+public class Task01SumOfNumbers {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a positive whole number: ");
+        try {
+            int n = input.nextInt();
+
+            if (n <= 0) {
+                System.out.println("Next time enter a POSITIVE whole number!");
+            } else {
+                int i = 0;
+                int result = 0;
+                while (i < n) {
+                    i++;
+                    result = result + i;
+                }
+                System.out.println(result);
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Wrong input. Next time enter a positive whole number!");
+        }
+    }
+}
