@@ -1,0 +1,22 @@
+package by.inventedcompanyname.branching;
+
+import java.util.Scanner;
+
+// Вычислить значение функции
+
+public class Task05SystemOfEquations {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number x: ");
+        double x = scanner.nextDouble();
+
+        if (x <= 3) {
+            double y = Math.pow(x, 2) - 3 * x + 9;
+            System.out.println(y);
+        } else {
+            double y = 1 / (Math.pow(x, 3) + 6);
+            System.out.println(y);
+        }
+    }
+}
