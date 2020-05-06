@@ -1,0 +1,46 @@
+package by.inventedcompanyname.branching;
+
+//Given arbitrarily large bricks and holes,
+// for any given hole the set of fitting bricks is smaller than the set of non-fitting bricks
+
+public class Task04WillBrickFit {
+    static class Brick {
+        int length;
+        int width;
+        int height;
+
+        Brick(int x, int y, int z) {
+            this.length = x;
+            this.width = y;
+            this.height = z;
+        }
+    }
+
+    static class Hole {
+        int length;
+        int width;
+
+        Hole(int x, int y) {
+            this.length = x;
+            this.width = y;
+        }
+    }
+
+    static Boolean willItFit(Brick b, Hole h) {
+        if ((b.length + b.width) <= (h.length + h.width) ||
+                (b.length + b.height) <= (h.length + h.width) ||
+                (b.width + b.height) <= (h.length + h.width)) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Brick b = new Brick(4, 3, 1);
+        Hole h = new Hole(10, 10);
+        Boolean result = willItFit(b, h);
+        System.out.println(result);
+    }
+}
