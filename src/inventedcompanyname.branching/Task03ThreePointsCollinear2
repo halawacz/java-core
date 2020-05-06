@@ -26,6 +26,7 @@ public class Task03ThreePointsCollinear2 {
         Point A = new Point(1, 2);
         Point B = new Point(3, 4);
         Point C = new Point(5, 6);
-        System.out.println(checkCollinearity(A, B, C));
+        Boolean result = checkCollinearity(A, B, C);
+        System.out.println(result);
     }
 }
