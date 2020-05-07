@@ -1,0 +1,12 @@
+package by.inventedcompanyname.cycles;
+
+//outputs to console ASCII characters skipping the control characters (0-31) in the "Decimal: ASCII symbol" format
+
+public class Task05PrintASCIITable {
+    public static void main(String[] args) {
+
+        for (int c = 32; c < 128; c++) {
+            System.out.println(c + ": " + (char) c);
+        }
+    }
+}
