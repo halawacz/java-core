@@ -1,0 +1,16 @@
+package by.inventedcompanyname.cycles;
+
+// Найти сумму квадратов первых ста чисел.
+
+public class Task02SumOfSquares {
+    public static void main(String[] args) {
+        int n = 100;
+        int result = 0;
+
+        for (int i = 0; i <= n; i++) {
+            result += (i * i);
+        }
+
+        System.out.println(result);
+    }
+}
