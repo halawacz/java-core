@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //Требуется определить факториал числа, которое ввел пользователь.
 
-public class Task25Cycle {
+public class Task06Factorial {
 	
 	public static void main(String[] args){
 		
