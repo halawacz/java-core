@@ -21,7 +21,7 @@ public class Task02LargerThanZSwap {
                 i++;
             }
         }
-        double[] largerThanZSwapped = Arrays.stream(arr).map(x -> x > z ? (x = z) : x).toArray();
+        double[] largerThanZSwapped = Arrays.stream(arr).map(x -> x > z ? x = z : x).toArray();
 
         for (double e : largerThanZSwapped) {
             System.out.println(e);
