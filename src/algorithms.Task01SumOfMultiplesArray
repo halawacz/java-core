@@ -1,0 +1,31 @@
+package by.inventedcompanyname.algorithms;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.stream.IntStream;
+import java.util.Scanner;
+// 1. В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К.
+
+public class Task01SumOfMultiplesArray {
+
+    public static void main(String[] args) {
+        BigInteger sum = new BigInteger("0");
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a natural number m:");
+        int m = sc.nextInt();
+        System.out.println("Enter a natural number n:");
+        int n = sc.nextInt();
+        System.out.println("Enter k:");
+        int k = sc.nextInt();
+
+        int[] A = IntStream.range(m, n + 1).toArray();
+        int[] MultiplesOfK = Arrays.stream(A).filter(x -> (x % k == 0)).toArray();
+        for (int e : MultiplesOfK) {
+            sum = sum.add(BigInteger.valueOf(e));
+        }
+        System.out.println(sum);
+    }
+}
+
