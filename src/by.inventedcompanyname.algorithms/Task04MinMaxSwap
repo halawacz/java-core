@@ -1,0 +1,27 @@
+//Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и наименьший элементы
+
+package by.inventedcompanyname.algorithms;
+
+public class Task04MinMaxSwap {
+    public static int[] swapMinMax(int[] array) {
+        int minIndex = 0, maxIndex = 0;
+        for (int i = 1; i < array.length; ++i) {
+            if (array[i] < array[minIndex])
+                minIndex = i;
+            if (array[i] > array[maxIndex])
+                maxIndex = i;
+        }
+        int t;
+        if (maxIndex != minIndex) {
+            t = array[minIndex];
+            array[minIndex] = array[maxIndex];
+            array[maxIndex] = t;
+        }
+        return array;
+    }
+
+    public static void main(String[] args) {
+        for (int i : swapMinMax(new int[]{1, 0, 9, 8, 2, 100}))
+            System.out.println(i);
+    }
+}
